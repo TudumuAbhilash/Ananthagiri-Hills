@@ -1,0 +1,300 @@
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 41, 30, 0.78) 0%,
+      rgba(27, 67, 50, 0.85) 60%,
+      rgba(15, 41, 30, 0.94) 100%
+    ),
+    url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80')
+      center/cover no-repeat;
+  color: var(--color-text-inverse);
+  padding: var(--space-12) 0 var(--space-16);
+}
+
+.hero-content {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(6px);
+}
+
+.hero-title {
+  color: var(--color-text-inverse);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: var(--text-lg);
+  max-width: 640px;
+}
+
+/* Hero Search Form */
+.hero-search-form {
+  width: 100%;
+  max-width: 640px;
+  background-color: var(--color-bg-surface);
+  padding: var(--space-2);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.hero-search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0.5rem var(--space-3);
+  flex: 1;
+  color: var(--color-text-main);
+}
+
+.hero-search-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: var(--text-base);
+  color: var(--color-text-main);
+  outline: none;
+}
+
+.hero-search-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+/* Category Shortcuts Strip */
+.category-strip-section {
+  margin-top: calc(var(--space-8) * -1);
+  position: relative;
+  z-index: 10;
+  padding-bottom: var(--space-6);
+}
+
+.category-shortcuts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.category-shortcut-card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.category-shortcut-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary-600);
+  box-shadow: var(--shadow-md);
+}
+
+.category-shortcut-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.category-shortcut-text h3 {
+  font-size: var(--text-base);
+  margin-bottom: 2px;
+}
+
+.category-shortcut-text p {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Itinerary Cards */
+.itinerary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.itinerary-card {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.itinerary-header-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.itinerary-stops-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-bg-main);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.itinerary-stop-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.itinerary-stop-number {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-800);
+  color: var(--color-text-inverse);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.itinerary-stop-details strong {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-text-main);
+}
+
+.itinerary-stop-details span {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Food & Stays Highlight Card */
+.highlight-card {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.highlight-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.highlight-pill {
+  font-size: var(--text-xs);
+  background-color: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+/* Visitor Tips & Safety Banner */
+.safety-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.safety-card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary-700);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.safety-card.warning {
+  border-left-color: var(--color-accent-amber);
+}
+
+.safety-card-icon {
+  color: var(--color-primary-800);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.safety-card.warning .safety-card-icon {
+  color: var(--color-accent-amber);
+}
+
+.safety-card h3 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-1);
+}
+
+.safety-card p {
+  font-size: var(--text-sm);
+}
+
+@media (min-width: 640px) {
+  .hero-search-form {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .category-shortcuts-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .safety-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .category-shortcuts-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .itinerary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

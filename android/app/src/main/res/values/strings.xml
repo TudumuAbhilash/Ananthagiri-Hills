@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ananthagiri Hills</string>
+    <string name="title_activity_main">Ananthagiri Hills</string>
+    <string name="package_name">com.ananthagirihills.app</string>
+    <string name="custom_url_scheme">com.ananthagirihills.app</string>
+</resources>

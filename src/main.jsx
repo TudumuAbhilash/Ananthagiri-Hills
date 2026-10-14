@@ -5,10 +5,17 @@ import './styles/global.css';
 import './styles/responsive.css';
 import App from './App.jsx';
 
-createRoot(document.getElementById('root')).render(
+// Determine correct router basename for development vs GitHub Pages production
+const routerBasename = import.meta.env.PROD ? '/Ananthagiri-Hills' : '/';
+
+createRoot(getElementByIdOrFallback('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <App />
     </BrowserRouter>
   </StrictMode>
 );
+
+function getElementByIdOrFallback(id) {
+  return document.getElementById(id);
+}

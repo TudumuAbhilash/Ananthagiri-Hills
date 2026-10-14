@@ -39,7 +39,7 @@ function NotFound() {
           <p style={{ marginBottom: 'var(--space-6)', maxWidth: '480px', marginInline: 'auto' }}>
             The page you are looking for may have moved or no longer exists.
           </p>
-          <a href="/" className="btn btn-primary">
+          <a href="/Ananthagiri-Hills/" className="btn btn-primary">
             Return to Homepage
           </a>
         </div>
@@ -56,6 +56,7 @@ export default function App() {
       <main id="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="" element={<Home />} />
           <Route path="/places" element={<Explore />} />
           <Route path="/places/:slug" element={<PlaceDetails />} />
           <Route path="/map" element={<MapView />} />
